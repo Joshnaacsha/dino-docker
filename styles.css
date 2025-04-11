@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #001f3f, #003366);
+    color: white;
+    text-align: center;
+}
+header, footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.game-container {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    margin: 50px auto;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.score {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.dino {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+.jump {
+    animation: jump 0.5s linear;
+}
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+.obstacle {
+    width: 20px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: moveObstacle 2s infinite linear;
+}
+@keyframes moveObstacle {
+    0% { right: 0; }
+    100% { right: 600px; }
+}
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
